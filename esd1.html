@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Soul - Products</title>
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            float: left;
+        }
+
+        nav ul {
+            list-style-type: none;
+            float: right;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background-color: #f0f0f0;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Products section styles */
+        .products {
+            padding: 50px 0;
+        }
+
+        .product {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 30%;
+            height: auto;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+        }
+
+        .product p {
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a class="home" href="esd.html">Secure Soul</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="esd.html">Home</a></li>
+                    <li><a href="esd1.html">Products</a></li>
+                    <li><a href="esd2.html">About</a></li>
+                    <li><a href="esd3.html">Contact</a></li>
+                    <li><a href="esd4.html" id="cart-link">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to Secure Soul</h2>
+            <p>Your destination for smart watches and GPS trackers.</p>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product">
+                <img src="https://www.bhphotovideo.com/images/images2500x2500/ematic_esw454w_smart_watch_1039958.jpg" alt="Smart Watch 1">
+                <h3>Smart Watch 1</h3>
+                <p>Description and details...</p>
+                <button onclick="addToCart('Smart Watch 1')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.bhphotovideo.com/images/images2500x2500/apple_mj2x2ll_a_watch_sport_smartwatch_38mm_1187194.jpg" alt="Smart Watch 2">
+                <h3>Smart Watch 2</h3>
+                <p>Description and details...</p>
+                <button onclick="addToCart('Smart Watch 2')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.bhphotovideo.com/images/images2500x2500/apple_mj362ll_a_apple_watch_38mm_smartwatch_1293065.jpg" alt="Smart Watch 3">
+                <h3>Smart Watch 3</h3>
+                <p>Description and details...</p>
+                <button onclick="addToCart('Smart Watch 3')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://techlomedia.in/wp-content/uploads/2017/06/71D8haR6OL.SL1500.jpg" alt="Smart Watch 4">
+                <h3>Smart Watch 4</h3>
+                <p>Description and details...</p>
+                <button onclick="addToCart('Smart Watch 4')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function addToCart(productName) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(productName);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(productName + ' has been added to your cart.');
+        }
+    </script>
+</body>
+</html>
