@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Soul - Smart Watches & GPS Trackers</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            float: left;
+            margin-left: 20px;
+        }
+
+        header h1 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style-type: none;
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background: url('images/hero-bg.jpg') no-repeat center center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: #100e0e;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .hero .btn:hover {
+            background-color: #e68a00;
+        }
+
+        /* Features section styles */
+        .features {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .feature {
+            display: inline-block;
+            width: 30%;
+            margin: 1.66%;
+        }
+
+        .feature img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .feature h3 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+        }
+
+        /* Products section styles */
+        .products {
+            background-color: #f0f0f0;
+            padding: 50px 0;
+        }
+
+        .products h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .product {
+            display: inline-block;
+            width: 30%;
+            margin: 1.66%;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .product p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+
+        /* Testimonials section styles */
+        .testimonials {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .testimonial {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .testimonial p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .testimonial h4 {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Call-to-Action (CTA) section styles */
+        .cta {
+            background-color: #ff9900;
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .cta form input[type="email"] {
+            padding: 10px;
+            font-size: 1rem;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .cta form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .cta form button:hover {
+            background-color: #555;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a class="home" href="esd.html">Secure Soul</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="esd.html">Home</a></li>
+                    <li><a href="esd1.html">Products</a></li>
+                    <li><a href="esd2.html">About</a></li>
+                    <li><a href="esd3.html">Contact</a></li>
+                    <li><a href="esd4.html" id="cart-link">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to Secure Soul</h2>
+            <p>Your destination for smart watches and GPS trackers.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="feature">
+                <img src="https://cdn3.vectorstock.com/i/1000x1000/71/82/premium-quality-product-gold-label-vector-1487182.jpg" alt="Feature 1">
+                <h3>High Quality</h3>
+                <p>Our smart watches and GPS trackers are made from premium materials for durability and comfort.</p>
+            </div>
+            <div class="feature">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.b9OyVJzx8L2ja3HELo081wHaE7&pid=Api&P=0&h=180" alt="Feature 2">
+                <h3>Advanced Technology</h3>
+                <p>Stay ahead with the latest features and innovations in wearable technology.</p>
+            </div>
+            <div class="feature">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2021/4/EL/CE/AC/33326747/download-3--500x500.png" alt="Feature 3">
+                <h3>Customer Support</h3>
+                <p>We offer 24/7 customer support to help you with any queries or issues.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Bestsellers</h2>
+            <div class="product">
+                <img src="https://www.bhphotovideo.com/images/images2500x2500/ematic_esw454w_smart_watch_1039958.jpg" alt="Smart Watch 1">
+                <h3>Smart Watch 1</h3>
+                <p>Description and details...</p>
+                <button onclick="addToCart('Smart Watch 1')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.bhphotovideo.com/images/images2500x2500/apple_mj2x2ll_a_watch_sport_smartwatch_38mm_1187194.jpg" alt="Smart Watch 2">
+                <h3>Smart Watch 2</h3>
+                <p>Description and details...</p>
+                <button onclick="addToCart('Smart Watch 2')">Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"The best smart watch I have ever owned! Highly recommend Secure Soul for their quality and service."</p>
+                <h4>- Riya</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Amazing GPS trackers. They have really made my life easier. Great customer support too!"</p>
+                <h4>- Rohit</h4>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Join Our Community</h2>
+            <p>Sign up for our newsletter to receive updates, offers, and more.</p>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Secure Soul. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
